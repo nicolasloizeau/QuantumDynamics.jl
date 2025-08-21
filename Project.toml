@@ -3,7 +3,21 @@ uuid = "03ef3f9b-1205-4d65-a1aa-9d907a6e83f8"
 authors = ["your-name"]
 version = "1.0.0-DEV"
 
+[deps]
+ITensorMPS = "0d1a4710-d33b-49a5-8f18-73bdf49b47e2"
+ITensors = "9136182c-28ba-11e9-034c-db9fb085ebd5"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+PauliStrings = "f07625cc-80e4-4099-a362-36a3484d9bcc"
+ProgressBars = "49802e3a-d2f1-5c88-81d8-b72133a6f568"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+
 [compat]
+ITensorMPS = "0.3.19"
+ITensors = "0.9.9"
+LinearAlgebra = "1.11.0"
+PauliStrings = "1.7.0"
+ProgressBars = "1.5.1"
+Random = "1.11.0"
 julia = "1.6.7"
 
 [extras]
