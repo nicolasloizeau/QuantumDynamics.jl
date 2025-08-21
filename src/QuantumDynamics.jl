@@ -2,6 +2,7 @@ module QuantumDynamics
 
 using PauliStrings
 import PauliStrings as ps
+using ITensors, ITensorMPS
 
 include("ModelsPS.jl")
 include("ModelsTEBD.jl")

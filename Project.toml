@@ -12,7 +12,7 @@ ProgressBars = "49802e3a-d2f1-5c88-81d8-b72133a6f568"
 Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 
 [compat]
-ITensorMPS = "0.3.19"
+ITensorMPS = "0.3.6"
 ITensors = "0.9.9"
 LinearAlgebra = "1.11.0"
 PauliStrings = "1.7.0"

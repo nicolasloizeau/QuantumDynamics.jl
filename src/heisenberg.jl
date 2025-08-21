@@ -5,7 +5,13 @@ using ProgressBars
 
 
 
+"""
+    heisenberg(H::Matrix, O::Matrix, observables, dt::Real, tmax::Real)
 
+Heisenberg evolution with dense matrices.
+Evolve the operator `O` in the Heisenberg picture under the Hamiltonian `H` for a time `tmax` with time step `dt`.
+`observables` is a list of functions, which are applied to the operator `O` at each time step.
+"""
 function heisenberg(H::Matrix, O::Matrix, observables, dt::Real, tmax::Real)
     U = exp(-im * H * dt)
     times = 0:dt:tmax
@@ -22,7 +28,14 @@ function togates(terms, step)
     append!(gates, reverse(gates))
 end
 
+"""
+    heisenberg(H::Vector{ITensor}, O::MPO, observables, dt::Real, tmax::Real; bd=100, cutoff=1E-8)
 
+Heisenberg evolution with MPO (TEBD).
+Evolve the operator `O` in the Heisenberg picture under the Hamiltonian `H` for a time `tmax` with time step `dt`.
+`observables` is a list of functions, which are applied to the operator `O` at each time step.
+`H` is a list of ITensors representing the Hamiltonian terms.
+"""
 function heisenberg(H::Vector{ITensor}, O::MPO, observables, dt::Real, tmax::Real; bd=100, cutoff=1E-8)
     Hgates = togates(H, dt)
     times = 0:dt:tmax

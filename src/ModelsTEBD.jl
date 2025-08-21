@@ -3,7 +3,12 @@ module ModelsTEBD
 
 using ITensors, ITensorMPS
 
+"""
+    ising(N, hx, hz, sites)
 
+Hamiltonian for the 1D Ising model with periodic boundary conditions.
+``H= \\sum_{j=1}^N ( Z_j Z_{j+1} + h_x X_j + h_z Z_j)``
+"""
 function ising(N, hx, hz, sites)
     terms = ITensor[]
     for j in 1:N
