@@ -10,5 +10,5 @@ Mostly for personal use.
 ## Installation
 
 ```julia
-] add https://github.com/nicolasloizeau/BosonStrings.jl
+] add https://github.com/nicolasloizeau/QuantumDynamics.jl
 ```
